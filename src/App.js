@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
 import BookList from './components/bookList/booklist';
 import './App.css';
-import Slideshow from './components/Ad/ad';
+// import Slideshow from './components/Ad/ad';
+import Search from './components/search/Search'
+
 
 function App() {
 
@@ -28,7 +30,8 @@ function App() {
     <div className="App">
       <div>
         <h1>Welcome to my library</h1>
-        <Slideshow/>
+        {/* <Slideshow/> */}
+        <Search/>
         <BookList books = {data}/>
       </div>
 
