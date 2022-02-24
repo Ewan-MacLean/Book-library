@@ -37,7 +37,7 @@
   } 
 
 .bookTile {
-    background-color:rgba(221, 228, 241, 0.472);
+    background-color: white;
     opacity: 1;
     border: 3px solid black;
     border-radius: 1em;
@@ -50,7 +50,7 @@
 
 
 .bookTileBack {
-    background-color:rgba(221, 228, 241, 0.472);
+    background-color:white;
     opacity: 1;
     border: 3px solid black;
     border-radius: 1em;

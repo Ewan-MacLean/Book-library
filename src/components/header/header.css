@@ -1,0 +1,12 @@
+.header-div {
+    background-color: white;
+    height: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+h1 {
+    font-size: xx-large;
+}

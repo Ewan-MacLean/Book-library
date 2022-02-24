@@ -3,9 +3,12 @@ import BookList from './components/bookList/booklist';
 import './App.css';
 // import Slideshow from './components/Ad/ad';
 import Search from './components/search/Search'
+import Header from './components/header/Header'
 
 
 function App() {
+
+  
 
   const [data,setData] = useState([])
 
@@ -29,8 +32,9 @@ function App() {
   return (
     <div className="App">
       <div>
-        <h1>Welcome to my library</h1>
+        <Header/>
         {/* <Slideshow/> */}
+        {/* <Search getQuery={(q) => setQuery(q)} /> */}
         <Search/>
         <BookList books = {data}/>
       </div>
