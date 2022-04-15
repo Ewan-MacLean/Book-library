@@ -4,15 +4,6 @@ import './book.css'
 
 const Book = function(props) {
 
-    function flipCard(event) {
-        // CSS
-        // .flip-card:hover .flip-card-inner {
-        //     transform: rotateY(180deg);
-        // }
-        // .bookTileBack {
-        //     transform: rotateY(180deg);
-        // }
-    }
     return(
         <div id="flip-card" className='flip-card'>
             <div id='flip-card-inner' className='flip-card-inner'>

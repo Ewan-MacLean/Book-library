@@ -1,28 +1,22 @@
 import React, {useState} from 'react'
 import './search.css'
 
-const Search = ({ getQuery }) => {
-    const [text, setText] = useState('')
-  
-    const onChange = (q) => {
-      setText(q)
-      getQuery(q)
-    }
-  
-    return (
-      <section className='search'>
-        <form>
-          <input
-            type='text'
-            className='form-control'
-            placeholder='Search characters'
-            value={text}
-            onChange={(e) => onChange(e.target.value)}
-            autoFocus
-          />
-        </form>
-      </section>
-    )
-  }
+const Search = ({query, setQuery}) => {
+
+  return (
+    <div className="Search">
+      <span className="SearchSpan">
+      </span>
+      <input
+        className="SearchInput"
+        type="text"
+        onChange={(e) => setQuery(e.target.value)}
+        placeholder='Search by title'
+      />
+
+    </div>
+  );
+};
+
   
   export default Search

@@ -1,14 +1,12 @@
 import { useState, useEffect } from 'react';
+import axios from 'axios';
 import BookList from './components/bookList/booklist';
 import './App.css';
-// import Slideshow from './components/Ad/ad';
 import Search from './components/search/Search'
 import Header from './components/header/Header'
 
 
 function App() {
-
-  
 
   const [data,setData] = useState([])
 
@@ -21,7 +19,9 @@ function App() {
     // to a state that contains API data
 
     // passing 'x' in as a parameter for setData
-    fetch('http://localhost:3000/books').then(x=>x.json().then(x=>setData(x)))
+    fetch(`http://localhost:3000/books`)
+    .then(response=>response.json()
+    .then(jsonResponse=>setData(jsonResponse)))
 
     // empty array means that it will run upon the first render. 
     // otherwise, useEffect will run everytime the state changes
@@ -33,10 +33,9 @@ function App() {
     <div className="App">
       <div>
         <Header/>
-        {/* <Slideshow/> */}
-        {/* <Search getQuery={(q) => setQuery(q)} /> */}
-        <Search/>
-        <BookList books = {data}/>
+        <Search onChange={ (e) => console.log(e.target.value)}/>
+        {/* the 'books' attribute is defined in BookList */}
+        <BookList books = {currentBooks}/>
       </div>
 
     </div>
