@@ -35,7 +35,7 @@ function App() {
         <Header/>
         <Search onChange={ (e) => console.log(e.target.value)}/>
         {/* the 'books' attribute is defined in BookList */}
-        <BookList books = {currentBooks}/>
+        <BookList books = {data}/>
       </div>
 
     </div>
